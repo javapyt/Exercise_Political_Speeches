@@ -1,0 +1,53 @@
+{
+	"name": "political-speeches-dkw-2020-frontend",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "vite build && npx ts-node --experimental-specifier-resolution=node backend/app.ts; ",
+		"dev:frontend": "vite dev",
+		"build:frontend": "vite build",
+		"preview:frontend": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"prepare": "npm run smui-theme-light && npm run smui-theme-dark",
+		"smui-theme-light": "smui-theme compile static/smui.css -i src/theme",
+		"smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark"
+	},
+	"devDependencies": {
+		"@feathersjs/express": "^5.0.0-pre.35",
+		"@feathersjs/feathers": "^5.0.0-pre.35",
+		"@smui/button": "^7.0.0-beta.0",
+		"@smui/data-table": "^7.0.0-beta.0",
+		"@smui/linear-progress": "^7.0.0-beta.0",
+		"@sveltejs/adapter-auto": "^1.0.0",
+		"@sveltejs/adapter-node": "^1.1.4",
+		"@sveltejs/kit": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"axios": "^1.2.3",
+		"csv": "^6.2.5",
+		"csv-string": "^4.1.1",
+		"dotenv": "^16.0.3",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"feathers-blob": "^2.6.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"smui-theme": "^7.0.0-beta.0",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"tslib": "^2.4.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0",
+		"vitest": "^0.25.3"
+	},
+	"type": "module",
+	"dependencies": {
+		"feathers-swagger": "^2.0.0",
+		"swagger-ui-dist": "^4.15.5"
+	}
+}

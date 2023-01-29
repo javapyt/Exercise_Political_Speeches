@@ -1,0 +1,38 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"experimentalSpecifierResolution": "node",
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "ES2020",
+    "module": "ES2020",
+    "outDir": "./tsc-out",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+		"lib": [
+      "es2020",
+      "dom"
+    ]
+	},
+	"ts-node": {
+    "esm": true
+  },
+	"exclude": [
+		"build"
+	]
+	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
+	//
+	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
+	// from the referenced tsconfig.json - TypeScript does not merge them in
+}
