@@ -1,10 +1,2 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
-
-	onMount(async () => {
-		console.log('Lol');
-	});
-</script>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Welcome to Exercise Political Speeches</h1>
+<p>Visit <a href="https://github.com/javapyt/Exercise_Political_Speeches"> to download the Repository and read the docs</p>
