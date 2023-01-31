@@ -13,4 +13,5 @@ Node Version 16.18 LTS
 
 ## About the App 
 An overview that shows the results for all files in the files directory can be found in the path /overview (e.g. localhost:3000/overview)
+
 The Api Docs can be found under /docs 
