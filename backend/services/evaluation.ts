@@ -4,7 +4,7 @@ import { SpeechProcessor } from '../utils/speechProcessor';
 import type { Params } from '@feathersjs/feathers';
 import { evaluationApiDoc } from './docs/evaluationApiDoc.js';
 import { readdirSync } from 'fs';
-
+import { Unprocessable } from '@feathersjs/errors';
 const convertToUrls = (fileNames: string[]) => {
 	return fileNames.map(
 		(fileName) => `http://localhost:${process.env.PORT}/csvprovider?fileName=${fileName}`
@@ -49,6 +49,7 @@ export class EvaluationService extends EventEmitter {
 			}
 		} catch (err) {
 			console.log(err);
+			throw new Unprocessable('The url you provided did not contain a valid or well structured csv file')
 		}
 		return result;
 	}
